@@ -24,7 +24,9 @@ jobs:
           git config --global user.email "23f3000315@ds.study.iitm.ac.in"
 
       - name: Commit and Push Changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the stored secret token
         run: |
           git add daily_log.txt
           git commit -m "Automated daily update: $(date)"
-          git push
+          git push https://x-access-token:${GH_TOKEN}@github.com/rithvikavivek/iit.git main
