@@ -29,4 +29,4 @@ jobs:
         run: |
           git add daily_log.txt
           git commit -m "Automated daily update: $(date)"
-          git push https://x-access-token:${GH_TOKEN}@https://github.com/rithvikavivek/iit main
+          git push https://x-access-token:${GH_TOKEN}@github.com/rithvikavivek/iit main
